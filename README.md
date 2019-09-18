@@ -5,9 +5,9 @@ This is extansion of DataColumn of Yii2. Allows to edit data of string type dire
 TO INSTALL:
 
 Create folder "jz" in "vendor" in your project.
-Place JZDataColumn.php in "jz" folder. Or any other reachable one.
-Place jzdatacolumn.js in you JavaScript folder.
-Place jzdatacolumn.css in your CSS folder.
+Place JZDropDownColumn.php in "jz" folder. Or any other reachable one.
+Place jzgridviewcolumn.js in you JavaScript folder.
+Place jzgridviewcolumn.css in your CSS folder.
 Make necessary changes to AppAsset.php.
 TO USE:
 
