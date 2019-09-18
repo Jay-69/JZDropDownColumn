@@ -1,5 +1,5 @@
 # JZDropDownColumn
-In place editable dropdown for GridView
+In place editable dropdown for Yii2 GridView
 This is extansion of DataColumn of Yii2. Allows to edit data of string type directly in GridView column.
 
 TO INSTALL:
