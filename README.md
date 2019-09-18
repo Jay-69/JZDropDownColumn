@@ -9,6 +9,7 @@ Place JZDropDownColumn.php in "jz" folder. Or any other reachable one.
 Place jzgridviewcolumn.js in you JavaScript folder.
 Place jzgridviewcolumn.css in your CSS folder.
 Make necessary changes to AppAsset.php.
+
 TO USE:
 
 See ExampleOfUse.php
