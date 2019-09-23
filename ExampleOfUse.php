@@ -36,7 +36,7 @@ Pjax::end();
 
 
 
-//Example of action for edit attribute via dropdown chahnge
+//Example of action for edit attribute via dropdown change
 
     public function actionIntedit(){		
         if(isset($_GET['data'])){
