@@ -16,8 +16,8 @@ Pjax::begin(['id' => 'pjax_id_1', 'options'=> ['class'=>'pjax', 'loader'=>'loade
 
             [
 		'class' => 'vendor\jz\JZDropDownColumn',
-                'className' => 'Payment',
-                'attribute' => 'payment_method',
+                'className' => 'YourClass',
+                'attribute' => 'attr',
                 'editable' => true,
                 'list' => ['List item 0', 'List item 1', 'List item 2'],
 		      'editUrl' => Url::to(['payment/intedit']),
