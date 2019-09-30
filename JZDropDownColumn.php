@@ -34,16 +34,16 @@ class JZDropDownColumn extends DataColumn{
     public $loaderPath='loader.gif';
     public $updateAll = false;//to update all pjax on page
 
-    public function getDataCellValue($model, $key, $index){        
-	if ($this->value !== null) {
-            if (is_string($this->value)) {
+    public function getDataCellValue($model, $key, $index)
+    { 
+	if ($this->value !== null){
+		
+            if (is_string($this->value)){
 		return ArrayHelper::getValue($this->list, ArrayHelper::getValue($model, $this->attribute));
             }
-
             return call_user_func($this->value, $model, $key, $index, $this);
 
-	} elseif ($this->attribute !== null) {
-			
+	} elseif ($this->attribute !== null) {			
             
             $val = ArrayHelper::getValue($this->list, ArrayHelper::getValue($model, $this->attribute));
 
@@ -60,11 +60,13 @@ class JZDropDownColumn extends DataColumn{
             } else {
                 return $val;
             }
+		
         }
         return null;
     }
 
-    public function getEditable($model, $key, $index) {
+    public function getEditable($model, $key, $index)
+    {
         if (is_bool($this->editable)) {
             return $this->editable;
         } else {
