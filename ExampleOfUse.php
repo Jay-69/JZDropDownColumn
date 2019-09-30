@@ -15,11 +15,11 @@ Pjax::begin(['id' => 'pjax_id_1', 'options'=> ['class'=>'pjax', 'loader'=>'loade
         'columns' => [
 
             [
-		      'class' => 'vendor\jz\JZDropDownColumn',
+		'class' => 'vendor\jz\JZDropDownColumn',
                 'className' => 'Payment',
                 'attribute' => 'payment_method',
                 'editable' => true,
-                'list' => $model::$paymentMethodArr,
+                'list' => ['List item 0', 'List item 1', 'List item 2'],
 		      'editUrl' => Url::to(['payment/intedit']),
 		      'emptyLabel' => Yii::t('msg','Click me to change'),
 		      'denyLabel' => Yii::t('msg','CANCEL'),
@@ -34,23 +34,22 @@ Pjax::begin(['id' => 'pjax_id_1', 'options'=> ['class'=>'pjax', 'loader'=>'loade
 Pjax::end();
 
 
-
-
 //Example of action for edit attribute via dropdown change
 
-    public function actionIntedit(){		
+    public function actionIntedit()
+    {		
         if(isset($_GET['data'])){
             $json = json_decode($_GET['data']);
             if(isset($json->class) && isset($json->id) && isset($json->attribute) && isset($json->value)){
                 $className = $json->class;
-                if($className == 'Payment'){
-                    $model = Payment::findOne(intval($json->id));
+                if($className == 'YourClass'){
+                    $model = YourClass::findOne(intval($json->id));
                     if(isset($model)){
                         $attribute = $json->attribute;
                         $model->$attribute = intval($json->value);//variable variable!!!
                         if($model->save()){
                             return json_encode(['msg'=>1,'val'=>$model->$attribute]);
-                        } else {return json_encode(['msg'=>0,'val'=>$this->firstErrorMessage($model)]);}
+                        } else {return json_encode(['msg'=>0,'val'=>'Error.']);}
                     } else {return json_encode(['msg'=>0,'val'=>'No model found.']);}
                 }
             } else {return json_encode(['msg'=>0,'val'=>'No correct data set provided.']);}
