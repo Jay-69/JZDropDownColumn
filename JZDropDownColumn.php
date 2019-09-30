@@ -18,21 +18,22 @@ use yii\helpers\Html;
  * @author Eugene Zemskov <www@atlanticbits.com>
  */
 
-class JZDropDownColumn extends DataColumn{
+class JZDropDownColumn extends DataColumn
+{
 
-    public $editable=false;
-    public $editUrl='#';
-    public $className='';
-    public $list=[];
-    public $emptyLabel='Click me to add';
-    public $denyLabel='CANCEL';//
-    public $emptyCssClass='jzdc_empty';
-    public $editCssClass='jzdc_edit';
-    public $infoCssClass='jzdc_info';
-    public $saveCssClass='jzdc_save';
-    public $denyCssClass='jzdc_deny';
-    public $loaderPath='loader.gif';
-    public $updateAll = false;//to update all pjax on page
+    public $editable = false;
+    public $editUrl = '#';
+    public $className = '';
+    public $list = [];
+    public $emptyLabel = 'Click me to add';
+    public $denyLabel = 'CANCEL';
+    public $emptyCssClass = 'jzdc_empty';
+    public $editCssClass = 'jzdc_edit';
+    public $infoCssClass = 'jzdc_info';
+    public $saveCssClass = 'jzdc_save';
+    public $denyCssClass = 'jzdc_deny';
+    public $loaderPath = 'loader.gif';
+    public $updateAll = false;//to update all pjaxs on page
 
     public function getDataCellValue($model, $key, $index)
     { 
